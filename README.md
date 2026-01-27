@@ -20,11 +20,19 @@
 
 ---
 
-## 実行方法（最小）
+## リポジトリの取得（clone）
 
 ```bash
-pip install -r requirements.txt
-python scripts/run_experiment.py
+git clone https://github.com/boyswillbeboys77/esn-sparse-reconstruction.git
+cd esn-sparse-reconstruction
+```
+
+## 実行方法（最小）
+
+```bashpip
+install -r requirements.txt
+python -m scripts.run_experiment
+
 ```
 
 ## 実行例（オプション指定）
