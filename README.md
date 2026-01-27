@@ -32,7 +32,6 @@ cd esn-sparse-reconstruction
 ```bashpip
 install -r requirements.txt
 python -m scripts.run_experiment
-
 ```
 
 ## 実行例（オプション指定）
