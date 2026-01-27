@@ -25,8 +25,8 @@
 ```bash
 pip install -r requirements.txt
 python scripts/run_experiment.py
+```
 
-```md
 ## 実行例（オプション指定）
 
 以下は、実験条件を明示して実行する例です。
