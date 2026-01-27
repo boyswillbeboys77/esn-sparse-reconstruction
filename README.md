@@ -25,3 +25,19 @@
 ```bash
 pip install -r requirements.txt
 python scripts/run_experiment.py
+
+```md
+## 実行例（オプション指定）
+
+以下は、実験条件を明示して実行する例です。
+
+```bash
+python scripts/run_experiment.py \
+  --T 100 \
+  --washout 20 \
+  --step_obs 60 \
+  --N_train 100 \
+  --N_test 30 \
+  --M 100 \
+  --K_obs 100 \
+  --plot 1
