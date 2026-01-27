@@ -39,7 +39,7 @@ python -m scripts.run_experiment
 以下は、実験条件を明示して実行する例です。
 
 ```bash
-python scripts/run_experiment.py \
+python -m scripts/run_experiment.py \
   --T 100 \
   --washout 20 \
   --step_obs 60 \
