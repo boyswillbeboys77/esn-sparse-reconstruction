@@ -50,13 +50,13 @@ pip install -r requirements.txt
 
 デフォルト設定で実験を実行します。
 ```bash
-python -m scripts.run_experiment
+python3 -m scripts.run_experiment
 ```
 実行例（オプション指定）
 
 実験条件を明示して実行する場合の例です。
 ```bash
-python -m scripts.run_experiment.py \
+python3 -m scripts.run_experiment.py \
   --T 100 \
   --washout 20 \
   --step_obs 60 \
