@@ -25,21 +25,16 @@ cd esn-sparse-reconstruction
 python -m venv venv
 source venv/bin/activate
 ```
-依存ライブラリのインストール
+ライブラリのインストール
 ```bash
 pip install -r requirements.txt
 ```
-実行方法
-
-デフォルト設定で実験を実行します。
+実行
 ```bash
 python3 -m scripts.run_experiment --plot 1 
 ```
-
 ### 結果が表示されない場合
-
 WSLなどGUIが利用できない環境では、以下のコマンドで、Windows側のエクスプローラーから結果を確認できます。
-
 ```bash
 explorer.exe esn_results
 ```
