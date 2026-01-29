@@ -20,26 +20,44 @@
 
 ---
 
-## リポジトリの取得（clone）
+## 動作環境
+
+- OS: **Linux / macOS**
+  - ※ Windows の場合は **WSL2（Ubuntu）を推奨**
+- Python: **3.9 以上**
+- bash / zsh などの Unix 系シェル
+
+---
+
+## リポジトリの取得
 
 ```bash
 git clone https://github.com/boyswillbeboys77/esn-sparse-reconstruction.git
 cd esn-sparse-reconstruction
 ```
 
-## 実行方法（最小）
 
-```bashpip
-install -r requirements.txt
+セットアップ
+（推奨）仮想環境の作成
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+依存ライブラリのインストール
+```bash
+pip install -r requirements.txt
+```
+実行方法
+
+デフォルト設定で実験を実行します。
+```bash
 python -m scripts.run_experiment
 ```
+実行例（オプション指定）
 
-## 実行例（オプション指定）
-
-以下は、実験条件を明示して実行する例です。
-
+実験条件を明示して実行する場合の例です。
 ```bash
-python -m scripts/run_experiment.py \
+python -m scripts.run_experiment.py \
   --T 100 \
   --washout 20 \
   --step_obs 60 \
@@ -48,3 +66,4 @@ python -m scripts/run_experiment.py \
   --M 100 \
   --K_obs 100 \
   --plot 1
+```
