@@ -114,7 +114,7 @@ def main():
             )
             plot_zoom_after_washout(
                 t, y, yhat, idx_obs, args.washout, args.zoom_len,
-                title=f"TEST {shown} ZOOM after washout (K={args.K_obs})"
+                title=f"TEST {shown}"
             )
             plt.savefig(os.path.join(args.save_dir, f"test_{shown}_zoom.png"), dpi=200)
             plt.show()
