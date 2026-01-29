@@ -42,7 +42,7 @@ def main():
     # --- optional viz import ---
     if args.plot == 1:
         import matplotlib.pyplot as plt
-        from src.viz import plot_training_signals, plot_test_example, plot_zoom_after_washout
+        from src.viz import plot_zoom_after_washout
         os.makedirs(args.save_dir, exist_ok=True)
 
     # --- time + obs index ---
@@ -70,11 +70,6 @@ def main():
         Xobs_list.append(Xobs)
         y_list.append(y)
         cyc_list.append(cyc)
-
-    if args.plot == 1:
-        plot_training_signals(t, y_list, idx_obs, args.washout, show_n=args.show_train)
-        plt.savefig(os.path.join(args.save_dir, "train_examples.png"), dpi=200)
-        plt.show()
 
     # learn transition + first readout
     A, B, b = learn_linear_transition_ABb(Xobs_list, y_list, args.ridge_trans, args.washout)
@@ -117,10 +112,6 @@ def main():
                 f"TEST {shown} cycles={cyc:.3f} "
                 f"RMSE={scores[-1][0]:.2e}, nRMSE={scores[-1][1]:.2e}, R2={scores[-1][2]:.4f}"
             )
-            plot_test_example(t, y, yhat, idx_obs, args.washout, title)
-            plt.savefig(os.path.join(args.save_dir, f"test_{shown}.png"), dpi=200)
-            plt.show()
-
             plot_zoom_after_washout(
                 t, y, yhat, idx_obs, args.washout, args.zoom_len,
                 title=f"TEST {shown} ZOOM after washout (K={args.K_obs})"
@@ -133,17 +124,7 @@ def main():
     # ============================================================
     # summary
     # ============================================================
-    print("=== TRAIN SUMMARY ===")
-    print(f"T={args.T}, washout={args.washout}, step_obs={args.step_obs}, Nobs={len(idx_obs)}")
-    print(f"N_train={args.N_train}, N_test={args.N_test}")
-    print(f"ESN TRUE: M={args.M}, spectral_radius={args.spectral_radius}, seed_esn={args.seed_esn}")
-    print(f"Observed: K={args.K_obs} (nodes 0..{args.K_obs-1})")
-    print(f"Transition ridge={args.ridge_trans}, Wout ridge={args.ridge_wout}")
-    print()
-    print("=== TEST SUMMARY ===")
-    print(f"RMSE : mean={scores[:,0].mean():.3e}, std={scores[:,0].std():.3e}")
-    print(f"nRMSE: mean={scores[:,1].mean():.3e}, std={scores[:,1].std():.3e}")
-    print(f"R^2  : mean={scores[:,2].mean():.6f}, std={scores[:,2].std():.6f}")
+    print("=== Executed successfully ===")
 
 if __name__ == "__main__":
     main()
