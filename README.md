@@ -10,7 +10,9 @@
 
 ---
 
-## リポジトリの取得
+## 以下のステップで実行できます。
+
+リポジトリの取得
 
 ```bash
 git clone https://github.com/boyswillbeboys77/esn-sparse-reconstruction.git
