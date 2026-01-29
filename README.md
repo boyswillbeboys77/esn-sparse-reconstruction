@@ -23,12 +23,12 @@ cd esn-sparse-reconstruction
 
 セットアップ
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 ```
 ライブラリのインストール
 ```bash
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 実行
 ```bash
@@ -43,9 +43,13 @@ explorer.exe esn_results
 ---
 
 ## 結果の見方
+結果の見方
 
-任意のsin波を復元したグラフが5つ表示されます。<br>
-青いグラフが真の波形で、オレンジの波形が予測した波形です。<br>
-二つの青い点が測定された点を表し、その間の波形を復元しています。
+- 任意の sin 波を復元したグラフが5つ表示されます<br>
 
+- 青線：真の波形<br>
+
+- オレンジ線：ESN により推定された波形<br>
+
+- 青い点：実際に測定された点。その間の波形を ESN が復元しています
 ---
