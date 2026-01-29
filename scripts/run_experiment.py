@@ -33,7 +33,7 @@ def parse_args():
     p.add_argument("--zoom_len", type=int, default=85)
 
     p.add_argument("--plot", type=int, default=0, help="0: no plots, 1: show plots")
-    p.add_argument("--save_dir", type=str, default="results", help="where to save plots if plot=1")
+    p.add_argument("--save_dir", type=str, default="esn_results", help="where to save plots if plot=1")
     return p.parse_args()
 
 def main():
