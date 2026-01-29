@@ -19,7 +19,6 @@ cd esn-sparse-reconstruction
 
 
 セットアップ
-（推奨）仮想環境の作成
 ```bash
 python -m venv venv
 source venv/bin/activate
