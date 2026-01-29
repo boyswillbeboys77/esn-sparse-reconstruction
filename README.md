@@ -52,3 +52,11 @@ pip install -r requirements.txt
 ```bash
 python3 -m scripts.run_experiment --plot 1 
 ```
+
+### WSL（GUIなし環境）の場合
+
+WSLなどGUIが利用できない環境では、以下のコマンドで、Windows側のエクスプローラーから結果を確認できます。
+
+```bash
+explorer.exe esn_results
+```
