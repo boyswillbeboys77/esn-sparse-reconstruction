@@ -53,7 +53,7 @@ pip install -r requirements.txt
 python3 -m scripts.run_experiment --plot 1 
 ```
 
-### WSL（GUIなし環境）の場合
+### 結果が表示されない場合
 
 WSLなどGUIが利用できない環境では、以下のコマンドで、Windows側のエクスプローラーから結果を確認できます。
 
