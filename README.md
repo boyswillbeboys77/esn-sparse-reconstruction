@@ -23,7 +23,6 @@
 ## 動作環境
 
 - OS: **Linux / macOS**
-  - ※ Windows の場合は **WSL2（Ubuntu）を推奨**
 - Python: **3.9 以上**
 - bash / zsh などの Unix 系シェル
 
