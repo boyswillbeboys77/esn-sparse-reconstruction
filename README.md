@@ -43,7 +43,6 @@ explorer.exe esn_results
 ---
 
 ## 結果の見方
-結果の見方
 
 - 任意の sin 波を復元したグラフが5つ表示されます<br>
 
