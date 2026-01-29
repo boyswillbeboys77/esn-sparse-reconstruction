@@ -56,7 +56,7 @@ python3 -m scripts.run_experiment
 
 実験条件を明示して実行する場合の例です。
 ```bash
-python3 -m scripts.run_experiment.py \
+python3 -m scripts.run_experiment \
   --T 100 \
   --washout 20 \
   --step_obs 60 \
