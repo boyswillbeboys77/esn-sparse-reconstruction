@@ -53,3 +53,12 @@ explorer.exe esn_results
 
 - 青い点：実際に測定された点。その間の波形を ESN が復元しています
 ---
+
+
+## クリーンアップ（任意）
+
+実行後、リポジトリが不要になった場合は、以下のコマンドで削除できます。
+
+```bash
+rm -r esn-sparse-reconstruction
+```
