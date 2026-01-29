@@ -62,3 +62,9 @@ explorer.exe esn_results
 ```bash
 rm -r esn-sparse-reconstruction
 ```
+
+※ 作業終了後、仮想環境を抜ける場合は以下を実行してください。
+
+```bash
+deactivate
+```
